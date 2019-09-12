@@ -1,5 +1,7 @@
 pipeline {
-    agent { docker 'python:3' }
+    agent {
+        docker {image 'python:3'}
+    }
     options {
         skipDefaultCheckout true
     }
