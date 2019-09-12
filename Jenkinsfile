@@ -1,9 +1,12 @@
 pipeline {
-    agent { label 'maven' }
+    agent { docker 'python:3' }
+    options {
+        skipDefaultCheckout true
+    }
     stages {
         stage('build') {
             steps {
-                sh 'mvn --version'
+                sh 'python --version'
             }
         }
     }

@@ -1,0 +1,11 @@
+kind: "BuildConfig"
+apiVersion: "v1"
+metadata:
+  name: "test-pipeline"
+spec:
+  source:
+    git:
+      uri: "https://github.com/josephok/jenkins-test-pipeline.git"
+  strategy:
+    jenkinsPipelineStrategy:
+      jenkinsfilePath: Jenkinsfile
